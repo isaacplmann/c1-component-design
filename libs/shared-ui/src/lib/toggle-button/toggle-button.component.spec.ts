@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToggleButtonComponent } from './toggle-button.component';
+import { ToggleComponent } from '../toggle/toggle.component';
 
 describe('ToggleButtonComponent', () => {
   let component: ToggleButtonComponent;
@@ -8,9 +9,16 @@ describe('ToggleButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToggleButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [ToggleButtonComponent],
+      providers: [
+        {
+          provides: ToggleComponent,
+          useValue: {
+            on: true
+          }
+        }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ToggleComponent } from '../toggle/toggle.component';
 
 @Component({
   selector: 'toggle-button',
@@ -6,15 +7,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./toggle-button.component.css']
 })
 export class ToggleButtonComponent implements OnInit {
-  on: boolean;
-  @Output() toggled: EventEmitter<boolean> = new EventEmitter();
-
-  constructor() {}
+  constructor(public toggle: ToggleComponent) {}
 
   ngOnInit() {}
 
   onClick() {
-    this.on = !this.on;
-    this.toggled.emit(this.on);
+    this.toggle.on = !this.toggle.on;
+    this.toggle.other;
   }
 }

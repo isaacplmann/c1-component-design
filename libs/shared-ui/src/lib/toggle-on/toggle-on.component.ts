@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToggleComponent } from '../toggle/toggle.component';
 
 @Component({
   selector: 'toggle-on',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toggle-on.component.css']
 })
 export class ToggleOnComponent implements OnInit {
-  on: boolean;
-
-  constructor() {}
+  constructor(public toggle: ToggleComponent) {}
 
   ngOnInit() {}
 }
