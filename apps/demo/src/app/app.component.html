@@ -1,10 +1,7 @@
 <b>Something</b>
-<toggle [on]="true" (toggled)="onToggle($event)">
-  <h1>Hi</h1>
-
-  <toggle-on></toggle-on>
-
-  <toggle-button></toggle-button>
-
-  <toggle-off></toggle-off>
+<toggle [on]="false" (toggled)="onToggle($event)">
+  <ng-template #toggleTemplate let-on="on" let-changeOn="changeOn">
+    <switch [on]="on" (click)="changeOn(!on)"></switch>
+    <p>Custom</p>
+  </ng-template>
 </toggle>

@@ -1,1 +1,13 @@
 <ng-content></ng-content>
+<h2>Something here</h2>
+<ng-template #defaultTemplate let-on="on" let-changeOn="changeOn">
+  <switch [on]="on" (click)="changeOn(!on)"></switch>
+</ng-template>
+<b>
+  <div
+    *ngTemplateOutlet="
+      template || defaultTemplate;
+      context: { on: on, changeOn: changeOn }
+    "
+  ></div>
+</b>

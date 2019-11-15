@@ -16,6 +16,7 @@ import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
     ToggleButtonComponent
   ],
   exports: [
+    SwitchComponent,
     ToggleComponent,
     ToggleOnComponent,
     ToggleOffComponent,
