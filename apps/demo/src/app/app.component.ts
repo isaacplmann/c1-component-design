@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+
+  onToggle(event) {
+    console.log(event);
+  }
 }
